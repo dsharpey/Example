@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root {
+
+:root {
     --primary-color: #2d3748;
     --accent-color: #718096;
     --cta-color: #e53e3e;
@@ -17,132 +18,135 @@
     --light-gray: #edf2f7;
     --border-color: #cbd5e0;
 }
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-        }
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
+/* Header Section */
+.header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
 
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
 
-        .header p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
+.header p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
 
-        .cta-button {
-            background: var(--cta-color);
-            color: var(--white);
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
+.cta-button {
+    background: var(--cta-color);
+    color: var(--white);
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
 
-        .cta-button:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-        }
+.cta-button:hover {
+    background: #c53030;
+    transform: translateY(-2px);
+}
 
-        /* Problem Section */
-        .problem-section {
-            background: var(--white);
-            padding: 60px 0;
-        }
+/* Problem Section */
+.problem-section {
+    background: var(--white);
+    padding: 60px 0;
+}
 
-        .problem-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: start;
-        }
+.problem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
 
-        .tired-of h2, .reality h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
+.tired-of h2, .reality h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
 
-        .tired-of ul {
-            list-style: none;
-        }
+.tired-of ul {
+    list-style: none;
+    text-align: left;
+}
 
-        .tired-of li {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            padding-left: 10px;
-        }
+.tired-of li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    text-align: left;
+}
 
-        .reality p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
+.reality p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
 
-        /* Benefits Section */
-        .benefits {
-            background: var(--light-gray);
-            padding: 60px 0;
-            text-align: center;
-        }
+/* Benefits Section */
+.benefits {
+    background: var(--light-gray);
+    padding: 60px 0;
+    text-align: center;
+}
 
-        .benefits h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
+.benefits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
 
-        .benefits ul {
-            list-style: none;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.benefits ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
 
-        .benefits li {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            padding: 15px;
-            background: var(--white);
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-left: 4px solid var(--accent-color);
-        }
+.benefits li {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--accent-color);
+    text-align: left;
+}
 
-     /* Social Proof Section */
+/* Social Proof Section */
 .social-proof {
     background: var(--white);
     padding: 60px 0;
@@ -160,8 +164,8 @@
     margin: 40px 0;
     position: relative;
     height: 200px;
-    width: 100vw; /* Full viewport width */
-    margin-left: calc(-50vw + 50%); /* Center it and extend to edges */
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
 }
 
 .carousel {
@@ -181,327 +185,328 @@
     font-size: 1.2rem;
     color: var(--accent-color);
     border: 2px dashed var(--border-color);
-    flex-shrink: 0; /* Prevent boxes from shrinking */
+    flex-shrink: 0;
 }
 
-    
 @keyframes slide {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-33.33%); } /* Only move 1/3 since we have 3 copies */
+    100% { transform: translateX(-50%); }
 }
-        }
 
-        /* Qualifier Section */
-        .qualifier {
-            background: var(--accent-color);
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
+/* Qualifier Section */
+.qualifier {
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
 
-        .qualifier h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-        }
+.qualifier h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
 
-        .qualifier ul {
-            list-style: none;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+.qualifier ul {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-        .qualifier li {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            padding: 10px;
-        }
+.qualifier li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding: 10px;
+}
 
-        /* About Section */
-        .about {
-            background: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
+/* About Section */
+.about {
+    background: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
 
-        .about h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
 
-        .about-placeholder {
-            width: 200px;
-            height: 200px;
-            background: var(--light-gray);
-            border: 2px dashed var(--border-color);
-            border-radius: 50%;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--accent-color);
-            font-size: 1.1rem;
-        }
+.about-placeholder {
+    width: 200px;
+    height: 200px;
+    background: var(--light-gray);
+    border: 2px dashed var(--border-color);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
 
-        .text-placeholder {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 30px;
-            background: var(--light-gray);
-            border: 2px dashed var(--border-color);
-            border-radius: 10px;
-            color: var(--accent-color);
-            font-size: 1.1rem;
-        }
+.text-placeholder {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: var(--light-gray);
+    border: 2px dashed var(--border-color);
+    border-radius: 10px;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
 
-        /* Final CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
+/* Final CTA Section */
+.final-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
 
-        .final-cta p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+.final-cta p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        /* Footer */
-        .footer {
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-        }
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
 
-        .social-icons {
-            margin-bottom: 20px;
-        }
+.social-icons {
+    margin-bottom: 20px;
+}
 
-        .social-icons a {
-            color: var(--white);
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
 
-        .social-icons a:hover {
-            color: var(--cta-color);
-        }
+.social-icons a:hover {
+    color: var(--cta-color);
+}
 
-        .footer p {
-            font-size: 1.1rem;
-            opacity: 0.8;
-        }
+.footer p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
 
-        /* Mobile Responsive - Scaled Down Version */
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
 
-            .header p {
-                font-size: 1.1rem;
-            }
+    .header p {
+        font-size: 1.1rem;
+    }
 
-            .cta-button {
-                padding: 12px 30px;
-                font-size: 1rem;
-            }
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
 
-            .problem-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
+    .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 
-            .tired-of h2, .reality h2 {
-                font-size: 1.5rem;
-                 align-items: left;
-            }
+    .tired-of h2, .reality h2 {
+        font-size: 1.5rem;
+    }
 
-            .tired-of li, .reality p {
-                font-size: 1rem;
-                 align-items: left;
-            }
+    .tired-of li, .reality p {
+        font-size: 1rem;
+    }
 
-            .benefits h2 {
-                font-size: 2rem;
-            }
+    .benefits h2 {
+        font-size: 2rem;
+    }
 
-            .benefits li {
-                font-size: 1rem;
-                padding: 12px;
-            }
+    .benefits li {
+        font-size: 1rem;
+        padding: 12px;
+    }
 
-            .social-proof h2 {
-                font-size: 1.5rem;
-            }
+    .social-proof h2 {
+        font-size: 1.5rem;
+    }
 
-            .review-box {
-                min-width: 180px;
-                height: 100px;
-                font-size: 1rem;
-            }
+    .review-box {
+        min-width: 140px;
+        height: 100px;
+        font-size: 0.9rem;
+        margin: 0 8px;
+    }
 
-            .qualifier h2 {
-                font-size: 1.5rem;
-            }
+    .carousel-container {
+        height: 130px;
+    }
 
-            .qualifier li {
-                font-size: 1rem;
-            }
+    .qualifier h2 {
+        font-size: 1.5rem;
+    }
 
-            .about h2 {
-                font-size: 1.5rem;
-            }
+    .qualifier li {
+        font-size: 1rem;
+    }
 
-            .about-placeholder {
-                width: 150px;
-                height: 150px;
-                font-size: 1rem;
-            }
+    .about h2 {
+        font-size: 1.5rem;
+    }
 
-            .text-placeholder {
-                padding: 20px;
-                font-size: 1rem;
-            }
+    .about-placeholder {
+        width: 150px;
+        height: 150px;
+        font-size: 1rem;
+    }
 
-            .final-cta p {
-                font-size: 1.1rem;
-            }
+    .text-placeholder {
+        padding: 20px;
+        font-size: 1rem;
+    }
 
-            .footer p {
-                font-size: 1rem;
-            }
+    .final-cta p {
+        font-size: 1.1rem;
+    }
 
-            .social-icons a {
-                font-size: 1.3rem;
-                margin: 0 10px;
-            }
-        }
+    .footer p {
+        font-size: 1rem;
+    }
 
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
+    .social-icons a {
+        font-size: 1.3rem;
+        margin: 0 10px;
+    }
+}
 
-        .modal-content {
-            background-color: var(--white);
-            margin: 5% auto;
-            padding: 40px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            cursor: pointer;
-        }
+.modal-content {
+    background-color: var(--white);
+    margin: 5% auto;
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
 
-        .close:hover,
-        .close:focus {
-            color: var(--primary-color);
-        }
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
 
-        .modal-content h2 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            text-align: center;
-        }
+.close:hover,
+.close:focus {
+    color: var(--primary-color);
+}
 
-        .modal-content p {
-            color: var(--text-color);
-            margin-bottom: 30px;
-            text-align: center;
-        }
+.modal-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.modal-content p {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
+.form-group {
+    margin-bottom: 20px;
+}
 
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid var(--border-color);
-            border-radius: 5px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
 
-        .form-submit-btn {
-            width: 100%;
-            background: var(--cta-color);
-            color: var(--white);
-            padding: 15px;
-            font-size: 1.1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
 
-        .form-submit-btn:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-        }
+.form-submit-btn {
+    width: 100%;
+    background: var(--cta-color);
+    color: var(--white);
+    padding: 15px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
 
-        /* Mobile Modal Styles */
-        @media (max-width: 768px) {
-            .modal-content {
-                margin: 10% auto;
-                padding: 30px 20px;
-                width: 95%;
-            }
-            
-            .modal-content h2 {
-                font-size: 1.5rem;
-            }
-            
-            .form-group input {
-                padding: 10px;
-                font-size: 14px;
-            }
-            
-            .form-submit-btn {
-                padding: 12px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+.form-submit-btn:hover {
+    background: #c53030;
+    transform: translateY(-2px);
+}
+
+/* Mobile Modal Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        padding: 30px 20px;
+        width: 95%;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .form-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .form-submit-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+</style>
   
 </head>
 <body>
@@ -614,25 +619,69 @@
  <script>
 // Reviews Animation
 <script>
-// Reviews Animation - Fixed for seamless infinite loop
+// Reviews Animation - True infinite loop
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
-    const reviewBoxes = document.querySelectorAll('.review-box');
+    const originalBoxes = document.querySelectorAll('.review-box');
     
-    // Clone the review boxes multiple times for seamless loop
-    for (let i = 0; i < 3; i++) { // Clone 3 times instead of 1
-        reviewBoxes.forEach(box => {
+    // Clone enough boxes to fill multiple screen widths
+    for (let i = 0; i < 5; i++) {
+        originalBoxes.forEach(box => {
             const clone = box.cloneNode(true);
             carousel.appendChild(clone);
         });
     }
 });
 
-// Form Modal Functionality (keep this the same)
+// Form Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // ... rest of your modal code stays the same
-});
-</script>
+    const modalHTML = `
+        <div id="leadModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Get Your FREE Copy Now!</h2>
+                <p>Enter your details below to download "The Catalyst Method" instantly:</p>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Download Now</button>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    const modal = document.getElementById('leadModal');
+    const closeBtn = document.querySelector('.close');
+    const form = document.getElementById('leadForm');
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+        });
+    });
+    
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
 
 // Form Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
