@@ -609,16 +609,26 @@
 </body>
  <script>
 // Reviews Animation
+<script>
+// Reviews Animation - Fixed for seamless infinite loop
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
-    
-    // Clone the review boxes to create seamless loop
     const reviewBoxes = document.querySelectorAll('.review-box');
-    reviewBoxes.forEach(box => {
-        const clone = box.cloneNode(true);
-        carousel.appendChild(clone);
-    });
+    
+    // Clone the review boxes multiple times for seamless loop
+    for (let i = 0; i < 3; i++) { // Clone 3 times instead of 1
+        reviewBoxes.forEach(box => {
+            const clone = box.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+    }
 });
+
+// Form Modal Functionality (keep this the same)
+document.addEventListener('DOMContentLoaded', function() {
+    // ... rest of your modal code stays the same
+});
+</script>
 
 // Form Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
