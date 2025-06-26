@@ -141,44 +141,47 @@
             border-left: 4px solid var(--accent-color);
         }
 
-        /* Social Proof Section */
-        .social-proof {
-            background: var(--white);
-            padding: 60px 0;
-            text-align: center;
-        }
+     /* Social Proof Section */
+.social-proof {
+    background: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
 
-        .social-proof h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-        }
+.social-proof h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
 
-        .carousel-container {
-            overflow: hidden;
-            margin: 40px 0;
-            position: relative;
-            height: 200px;
-        }
+.carousel-container {
+    overflow: hidden;
+    margin: 40px 0;
+    position: relative;
+    height: 200px;
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center it and extend to edges */
+}
 
-        .carousel {
-            display: flex;
-            animation: slide 15s infinite linear;
-        }
+.carousel {
+    display: flex;
+    animation: slide 15s infinite linear;
+}
 
-        .review-box {
-            min-width: 300px;
-            height: 150px;
-            background: var(--light-gray);
-            margin: 0 20px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: var(--accent-color);
-            border: 2px dashed var(--border-color);
-        }
+.review-box {
+    min-width: 300px;
+    height: 150px;
+    background: var(--light-gray);
+    margin: 0 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    border: 2px dashed var(--border-color);
+    flex-shrink: 0; /* Prevent boxes from shrinking */
+}
 
         @keyframes slide {
             0% { transform: translateX(0); }
