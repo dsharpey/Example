@@ -170,7 +170,9 @@ body {
 
 .carousel {
     display: flex;
-    animation: infinite linear;
+    width: calc(320px * 50); /* Width for 50 boxes total */
+    animation: slide 30s linear infinite;
+}
 }
 
 .review-box {
@@ -189,8 +191,12 @@ body {
 }
 
 @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-320px * 25)); /* Move exactly half the boxes (25) */
+    }
 }
 
 /* Qualifier Section */
@@ -558,16 +564,16 @@ body {
             <h2>This method is proven and tested by 130+ individuals, see what some of them are saying:</h2>
             <div class="carousel-container">
                 <div class="carousel">
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
-                    <div class="review-box">Review</div>
+                    <div class="review-box">1</div>
+                    <div class="review-box">2</div>
+                    <div class="review-box">3</div>
+                    <div class="review-box">4</div>
+                    <div class="review-box">5</div>
+                    <div class="review-box">6</div>
+                    <div class="review-box">7</div>
+                    <div class="review-box">8</div>
+                    <div class="review-box">9</div>
+                    <div class="review-box">10</div>
                 </div>
             </div>
             <a href="#" class="cta-button">Get instant access now</a>
@@ -617,18 +623,20 @@ body {
     </footer>
 </body>
  <script>
-// Reviews Animation - True infinite loop
-// Reviews Animation - Simple left scroll
+// Reviews Animation - 50 boxes total
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const originalBoxes = document.querySelectorAll('.review-box');
     
-    // Just duplicate the original boxes once
-    originalBoxes.forEach(box => {
-        const clone = box.cloneNode(true);
-        carousel.appendChild(clone);
-    });
+    // Clone the original 10 boxes 4 times to get 50 total (10 original + 40 clones)
+    for (let i = 0; i < 4; i++) {
+        originalBoxes.forEach(box => {
+            const clone = box.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+    }
 });
+</script>
 // Form Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const modalHTML = `
