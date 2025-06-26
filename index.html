@@ -618,19 +618,17 @@ body {
 </body>
  <script>
 // Reviews Animation - True infinite loop
+// Reviews Animation - Simple left scroll
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
     const originalBoxes = document.querySelectorAll('.review-box');
     
-    // Clone enough boxes to fill multiple screen widths
-    for (let i = 0; i < 5; i++) {
-        originalBoxes.forEach(box => {
-            const clone = box.cloneNode(true);
-            carousel.appendChild(clone);
-        });
-    }
+    // Just duplicate the original boxes once
+    originalBoxes.forEach(box => {
+        const clone = box.cloneNode(true);
+        carousel.appendChild(clone);
+    });
 });
-
 // Form Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const modalHTML = `
