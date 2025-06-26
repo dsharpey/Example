@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Catalyst Method - Transform Your Body in 4 Hours Per Week</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a2332;
+            --accent-color: #4a5d23;
+            --cta-color: #ff6b35;
+            --background-color: #f8f9fa;
+            --text-color: #2c3e50;
+            --white: #ffffff;
+            --light-gray: #ecf0f1;
+            --border-color: #bdc3c7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background: var(--cta-color);
+            color: var(--white);
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .tired-of h2, .reality h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .tired-of ul {
+            list-style: none;
+        }
+
+        .tired-of li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        .reality p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+
+        /* Benefits Section */
+        .benefits {
+            background: var(--light-gray);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .benefits h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .benefits ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .benefits li {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: var(--white);
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            background: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .social-proof h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .carousel-container {
+            overflow: hidden;
+            margin: 40px 0;
+            position: relative;
+            height: 200px;
+        }
+
+        .carousel {
+            display: flex;
+            animation: slide 15s infinite linear;
+        }
+
+        .review-box {
+            min-width: 300px;
+            height: 150px;
+            background: var(--light-gray);
+            margin: 0 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            border: 2px dashed var(--border-color);
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Qualifier Section */
+        .qualifier {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .qualifier h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .qualifier ul {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .qualifier li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+
+        .about-placeholder {
+            width: 200px;
+            height: 200px;
+            background: var(--light-gray);
+            border: 2px dashed var(--border-color);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        .text-placeholder {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            background: var(--light-gray);
+            border: 2px dashed var(--border-color);
+            border-radius: 10px;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .final-cta p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--cta-color);
+        }
+
+        .footer p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* Mobile Responsive - Scaled Down Version */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .tired-of h2, .reality h2 {
+                font-size: 1.5rem;
+            }
+
+            .tired-of li, .reality p {
+                font-size: 1rem;
+            }
+
+            .benefits h2 {
+                font-size: 2rem;
+            }
+
+            .benefits li {
+                font-size: 1rem;
+                padding: 12px;
+            }
+
+            .social-proof h2 {
+                font-size: 1.5rem;
+            }
+
+            .review-box {
+                min-width: 250px;
+                height: 120px;
+                font-size: 1rem;
+            }
+
+            .qualifier h2 {
+                font-size: 1.5rem;
+            }
+
+            .qualifier li {
+                font-size: 1rem;
+            }
+
+            .about h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-placeholder {
+                width: 150px;
+                height: 150px;
+                font-size: 1rem;
+            }
+
+            .text-placeholder {
+                padding: 20px;
+                font-size: 1rem;
+            }
+
+            .final-cta p {
+                font-size: 1.1rem;
+            }
+
+            .footer p {
+                font-size: 1rem;
+            }
+
+            .social-icons a {
+                font-size: 1.3rem;
+                margin: 0 10px;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--primary-color);
+        }
+
+        .modal-content h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .modal-content p {
+            color: var(--text-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            background: var(--cta-color);
+            color: var(--white);
+            padding: 15px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .form-submit-btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        /* Mobile Modal Styles */
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 10% auto;
+                padding: 30px 20px;
+                width: 95%;
+            }
+            
+            .modal-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .form-group input {
+                padding: 10px;
+                font-size: 14px;
+            }
+            
+            .form-submit-btn {
+                padding: 12px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+  
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="header">
+        <div class="container">
+            <h1>The Catalyst Method: Transform Your Body in 4 Hours Per Week</h1>
+            <p>The military-tested system for building strength and muscle on minimal time</p>
+            <a href="#" class="cta-button">Get instant access now</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-grid">
+                <div class="tired-of">
+                    <h2>If you're tired of:</h2>
+                    <ul>
+                        <li>Thinking you need hours in the gym everyday 🥱</li>
+                        <li>Doing overcomplicated workouts 🏋🏽</li>
+                        <li>Feeling like you're dragging through each day 🔥</li>
+                        <li>Having no progress to show 🚧</li>
+                    </ul>
+                </div>
+                <div class="reality">
+                    <h2>Here's the reality:</h2>
+                    <p>You're probably doing MORE work for LESS results. Your muscles only need a specific amount of training to grow - anything beyond that is actually slowing you down and keeping you stuck.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2>What you'll learn inside:</h2>
+            <ul>
+                <li>The exact reason you're not seeing results (and the simple fix)</li>
+                <li>How to build the body you want in just 4 hours per week</li>
+                <li>The 3 biggest mistakes keeping you small and weak</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>This method is proven and tested by 130+ individuals, see what some of them are saying:</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                    <div class="review-box">Review</div>
+                </div>
+            </div>
+            <a href="#" class="cta-button">Get instant access now</a>
+        </div>
+    </section>
+
+    <!-- Qualifier Section -->
+    <section class="qualifier">
+        <div class="container">
+            <h2>This is NOT for you if:</h2>
+            <ul>
+                <li>You want magic pills or shortcuts</li>
+                <li>You're not willing to follow a proven system</li>
+                <li>You prefer making excuses over making progress</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About me:</h2>
+            <div class="about-placeholder">Placeholder Image</div>
+            <div class="text-placeholder">Placeholder text</div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <p>If you're ready to start seeing real progress and finally feel proud when you look in the mirror, grab your FREE copy now. Limited time offer - don't let another day pass watching others get the results you want.</p>
+            <a href="#" class="cta-button">Get instant access now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>Maximize your progress, elevate your life</p>
+        </div>
+    </footer>
+</body>
+ <script>
+// Reviews Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('.carousel');
+    
+    // Clone the review boxes to create seamless loop
+    const reviewBoxes = document.querySelectorAll('.review-box');
+    reviewBoxes.forEach(box => {
+        const clone = box.cloneNode(true);
+        carousel.appendChild(clone);
+    });
+});
+
+// Form Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Create modal HTML
+    const modalHTML = `
+        <div id="leadModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Get Your FREE Copy Now!</h2>
+                <p>Enter your details below to download "The Catalyst Method" instantly:</p>
+                <form id="leadForm">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <button type="submit" class="form-submit-btn">Download Now</button>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    // Add modal to body
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Get modal elements
+    const modal = document.getElementById('leadModal');
+    const closeBtn = document.querySelector('.close');
+    const form = document.getElementById('leadForm');
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    
+    // Open modal when CTA buttons are clicked
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+        });
+    });
+    
+    // Close modal when X is clicked
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        
+        // Here you would normally send the data to your server
+        console.log('Form submitted:', { name, email });
+        
+        // Show success message
+        alert('Thank you! Your download link has been sent to your email.');
+        
+        // Close modal and reset form
+        modal.style.display = 'none';
+        form.reset();
+    });
+});
+</script>
+</body>
+</html>
+
