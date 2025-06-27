@@ -170,9 +170,8 @@ body {
 
 .carousel {
     display: flex;
-    width: calc(320px * 50); /* Width for 50 boxes total */
     animation: slide 30s linear infinite;
-}
+    width: max-content; /* Let it size itself */
 }
 
 .review-box {
@@ -192,12 +191,12 @@ body {
 
 @keyframes slide {
     0% {
-        transform: translateX(0);
+        transform: translateX(100vw); /* Start from right edge */
     }
     100% {
-        transform: translateX(calc(-320px * 25)); /* Move exactly half the boxes (25) */
+        transform: translateX(-100%); /* Move completely off left */
     }
-}
+
 
 /* Qualifier Section */
 .qualifier {
