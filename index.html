@@ -623,18 +623,24 @@ body {
     </footer>
 </body>
  <script>
+<script>
 // Reviews Animation - 50 boxes total
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
-    const originalBoxes = document.querySelectorAll('.review-box');
+    const originalBoxes = Array.from(document.querySelectorAll('.review-box'));
     
-    // Clone the original 10 boxes 4 times to get 50 total (10 original + 40 clones)
-    for (let i = 0; i < 4; i++) {
-        originalBoxes.forEach(box => {
-            const clone = box.cloneNode(true);
-            carousel.appendChild(clone);
-        });
+    // Make sure we have boxes to clone
+    if (originalBoxes.length > 0) {
+        // Clone the original boxes 4 times to get 50 total
+        for (let i = 0; i < 4; i++) {
+            originalBoxes.forEach(box => {
+                const clone = box.cloneNode(true);
+                carousel.appendChild(clone);
+            });
+        }
     }
+});
+</script>
 });
 </script>
 // Form Modal Functionality
