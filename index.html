@@ -170,8 +170,9 @@ body {
 
 .carousel {
     display: flex;
+    width: calc(320px * 50); /* Width for 50 boxes total */
     animation: slide 30s linear infinite;
-    width: max-content; /* Let it size itself */
+}
 }
 
 .review-box {
@@ -191,12 +192,12 @@ body {
 
 @keyframes slide {
     0% {
-        transform: translateX(100vw); /* Start from right edge */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(-100%); /* Move completely off left */
+        transform: translateX(calc(-320px * 25)); /* Move exactly half the boxes (25) */
     }
-
+}
 
 /* Qualifier Section */
 .qualifier {
@@ -622,24 +623,18 @@ body {
     </footer>
 </body>
  <script>
-<script>
 // Reviews Animation - 50 boxes total
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('.carousel');
-    const originalBoxes = Array.from(document.querySelectorAll('.review-box'));
+    const originalBoxes = document.querySelectorAll('.review-box');
     
-    // Make sure we have boxes to clone
-    if (originalBoxes.length > 0) {
-        // Clone the original boxes 4 times to get 50 total
-        for (let i = 0; i < 4; i++) {
-            originalBoxes.forEach(box => {
-                const clone = box.cloneNode(true);
-                carousel.appendChild(clone);
-            });
-        }
+    // Clone the original 10 boxes 4 times to get 50 total (10 original + 40 clones)
+    for (let i = 0; i < 4; i++) {
+        originalBoxes.forEach(box => {
+            const clone = box.cloneNode(true);
+            carousel.appendChild(clone);
+        });
     }
-});
-</script>
 });
 </script>
 // Form Modal Functionality
@@ -766,5 +761,3 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
-
-
